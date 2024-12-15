@@ -31,7 +31,6 @@ form.addEventListener("submit", async function (e) {
   if (has) {
     const [movie] = data.filter((data) => data.movie.toLowerCase() === value);
     const movieOrder = await movie.order.split(",");
-    console.log(movieOrder[movieOrder.length]);
 
     const request = await fetch(
       `https://www.omdbapi.com/?apikey=12285a27&t=${movieOrder[0]}`
