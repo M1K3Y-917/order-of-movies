@@ -34,7 +34,7 @@ form.addEventListener("submit", async function (e) {
     console.log(movieOrder[movieOrder.length]);
 
     const request = await fetch(
-      `http://www.omdbapi.com/?apikey=12285a27&t=${movieOrder[0]}`
+      `https://www.omdbapi.com/?apikey=12285a27&t=${movieOrder[0]}`
     );
     const imgdata = await request.json();
     movieContainer.textContent = "";
